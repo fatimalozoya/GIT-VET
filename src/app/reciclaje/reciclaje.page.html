@@ -42,9 +42,18 @@
   </ion-slides>
   
   <div class="centrado">
-      <div class="divButton">
+    <div class="divButton">
        <ion-button shape="round" size="large" type="submit" (click)="mostrarMapa()">Mostrar Mapa</ion-button>
-     </div>
+       
+      </div>
   </div>
   
+  <div class="centrado">
+    <div class="divButton">
+       <ion-button shape="round" size="large" type="submit" (click)="hacerFoto()">Hacer foto</ion-button>
+       <img [src]="foto" *ngIf="foto" />
+      </div>
+  </div>
+
+
 </ion-content>

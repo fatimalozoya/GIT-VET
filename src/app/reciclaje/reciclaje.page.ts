@@ -14,7 +14,7 @@ import { MapaModalPage } from 'src/app/reciclaje/mapa-modal/mapa-modal.page';
   styleUrls: ['./reciclaje.page.scss'],
 })
 export class ReciclajePage {
-
+  foto: any;
   lugarActual: Lugar;
   lugaresLista: Lugar[] = [];
   constructor(private camera: Camera, private webview: WebView, private geo: Geolocation, private modalController: ModalController){}
@@ -42,7 +42,9 @@ export class ReciclajePage {
           slides.length().then(number => console.log(number));
         })
       })
-*/
+*/  
+  
+
       setTimeout(()=>{
         slides.length().then(number => console.log(number));
         slides.slideTo(this.lugaresLista.length - 1);
@@ -82,6 +84,17 @@ export class ReciclajePage {
     });
   }
 
+  
+  hacerFoto() {
+    const options: CameraOptions = {
+      destinationType: this.camera.DestinationType.DATA_URL
+    }
+    this.camera.getPicture(options).then((imageData) => {
+      this.foto = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+      console.log(err);
+    });
+  }
  
 
 }
