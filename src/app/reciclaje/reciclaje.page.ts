@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { Geolocation, Geoposition } from '@ionic-native/geolocation/ngx';
 import { Lugar } from '../app/../models/Lugar';
+import {NavController} from '@ionic/angular';
 
 import { ModalController } from '@ionic/angular';
 import { MapaModalPage } from 'src/app/reciclaje/mapa-modal/mapa-modal.page';
+import { Options } from 'selenium-webdriver/ie';
 
 
 @Component({
@@ -15,9 +17,22 @@ import { MapaModalPage } from 'src/app/reciclaje/mapa-modal/mapa-modal.page';
 })
 export class ReciclajePage {
   foto: any;
+  lat: number;
+  lon: number;
   lugarActual: Lugar;
   lugaresLista: Lugar[] = [];
-  constructor(private camera: Camera, private webview: WebView, private geo: Geolocation, private modalController: ModalController){}
+  constructor(private camera: Camera, private webview: WebView, private geo: Geolocation, private modalController: ModalController, public NavCtrl: NavController, public geolocation: Geolocation){
+   this.getGeolocation()
+  }
+  
+   getGeolocation(){
+    this.geolocation.getCurrentPosition().then((geoposition: Geoposition)=>{
+      this.lat = geoposition.coords.latitude;
+      this.lon = geoposition.coords.longitude;
+    });
+  }
+  
+
 
   tomarFoto(slides){
     const options: CameraOptions = {
