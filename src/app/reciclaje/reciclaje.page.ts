@@ -21,19 +21,9 @@ export class ReciclajePage {
   lon: number;
   lugarActual: Lugar;
   lugaresLista: Lugar[] = [];
-  constructor(private camera: Camera, private webview: WebView, private geo: Geolocation, private modalController: ModalController, public NavCtrl: NavController, public geolocation: Geolocation){
-   this.getGeolocation()
-  }
+  constructor(private camera: Camera, private webview: WebView, private geo: Geolocation, private modalController: ModalController, public NavCtrl: NavController){
   
-   getGeolocation(){
-    this.geolocation.getCurrentPosition().then((geoposition: Geoposition)=>{
-      this.lat = geoposition.coords.latitude;
-      this.lon = geoposition.coords.longitude;
-    });
   }
-  
-
-
   tomarFoto(slides){
     const options: CameraOptions = {
       quality: 100,
@@ -100,16 +90,8 @@ export class ReciclajePage {
   }
 
   
-  hacerFoto() {
-    const options: CameraOptions = {
-      destinationType: this.camera.DestinationType.DATA_URL
-    }
-    this.camera.getPicture(options).then((imageData) => {
-      this.foto = 'data:image/jpeg;base64,' + imageData;
-    }, (err) => {
-      console.log(err);
-    });
-  }
+ 
+
  
 
 }
