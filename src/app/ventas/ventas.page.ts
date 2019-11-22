@@ -50,14 +50,6 @@ export class HomePage {
     }
   ];
 
-  /*SwitchFlash(evento) {
-    const power: boolean = evento.target.checked;
-    if (power) {
-      this.flash.switchOn();
-    } else {
-      this.flash.switchOff();
-    }
-  }*/
 
   reproducirAnimal(animal) {
     console.log(animal);

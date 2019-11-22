@@ -1,23 +1,15 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>
-        EL ABC DE 
-        LOS ANIMALES
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar  color="primary">
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+        <ion-title>GALERÍA DE MASCOTAS
+          <ion-icon name="ios-images"></ion-icon>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
   
   <ion-content>
-      <label>
-          <input
-          type="checkbox"
-          checked/>
-          <div>
-          <span class="on">On</span>
-          <span class="off">Off</span>
-          </div>
-          <i></i>
-      </label>
     <ion-grid>
       <ion-row>
         <ion-col size="6" *ngFor="let animal of Animales">
