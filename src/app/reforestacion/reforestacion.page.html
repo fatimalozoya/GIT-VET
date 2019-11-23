@@ -11,16 +11,15 @@
   
   <ion-content>
 
-      <label>
-          <input
-          type="checkbox"
-          checked/>
-          <div>
-          <span class="on">On</span>
-          <span class="off">Off</span>
-          </div>
-          <i></i>
-      </label>
+    <label>
+      <input type="checkbox" (change)="switchFlash($event)"/>
+      <div>
+        <span class="on">On</span>
+        <span class="off">Off</span>
+      </div>  
+      <i></i>
+    </label>
+    
       
     <ion-card>
       <img src="assets/mishi.jpg">

@@ -18,7 +18,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { AgmCoreModule } from '@agm/core';
 import { MapaModalPage } from 'src/app/reciclaje/mapa-modal/mapa-modal.page';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
-
+import { Flashlight } from '@ionic-native/flashlight/ngx';
 @NgModule({
   declarations: [AppComponent, MapaModalPage],
   entryComponents: [MapaModalPage],
@@ -39,6 +39,7 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
     Camera,
     WebView,
     Geolocation,
+    Flashlight,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
