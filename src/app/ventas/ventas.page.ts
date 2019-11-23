@@ -11,8 +11,22 @@ export class HomePage {
 
   Animales = [
     {
+      audio: 'assets/gato.mp3',
+      imagen: 'assets/gato.jpg',
+      nombre: 'Gato',
+      info: 'Felino que ronronea'
+    },
+
+    {
+      audio: 'assets/hamster.mp3',
+      imagen: 'assets/hamster.jpg',
+      nombre: 'Hamster',
+      info:  'Roedor que es adorable'
+    },
+
+    {
     audio: 'assets/perro.mp3',
-    imagen: 'assets/perro.png',
+    imagen: 'assets/perro.jpg',
     nombre: 'Perro',
     especie: 'canino',
     alimentacion: 'croquetas',
@@ -20,7 +34,7 @@ export class HomePage {
     peso: 'ligero',
     genero: 'macho',
     raza: 'Chihuahua',
-    info: 'Mamifero que se caracteriza por su olfato, inteligencia y fidelidad'
+    info: 'Mamifero amigo de Humano'
     },
 
     {
@@ -33,12 +47,12 @@ export class HomePage {
     peso: 'pesado',
     genero: 'macho',
     raza: 'Bengala',
-    info: 'Mamífero felino de pelaje amarillo leonado con rayas oscuras.'
+    info: 'Mamífero Felino grande'
     },
 
     {
     audio: 'assets/sapo.mp3',
-    imagen: 'assets/sapo.png',
+    imagen: 'assets/sapo.jfif',
     nombre: 'Sapo',
     especie: 'anfibio',
     alimentacion: 'insectos',
@@ -46,7 +60,14 @@ export class HomePage {
     peso: 'ligero',
     genero: 'macho',
     raza: 'Americano',
-    info: 'Anfibio de cuerpo más grueso que la rana y con la piel sembrada de verrugas.'
+    info: 'Anfibio con verrugas'
+    },
+
+    {
+      audio: 'assets/cuyo.mp3',
+      imagen: 'assets/cuyo.jpg',
+      nombre: 'Cuyo',
+      info: 'Roedor grande y tierno'
     }
   ];
 
