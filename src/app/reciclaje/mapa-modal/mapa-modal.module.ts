@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MapaModalPage } from './mapa-modal.page';
-import { Lugar } from 'src/app/models/Lugar';
+import { Geolocation} from '@ionic-native/geolocation/ngx';
 import { AgmCoreModule } from '@agm/core';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
@@ -24,7 +24,8 @@ const routes: Routes = [
     AgmSnazzyInfoWindowModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    Geolocation,
   ],
   declarations: [MapaModalPage]
 })

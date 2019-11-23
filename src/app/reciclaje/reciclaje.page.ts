@@ -16,10 +16,11 @@ import { Options } from 'selenium-webdriver/ie';
   styleUrls: ['./reciclaje.page.scss'],
 })
 export class ReciclajePage {
-  foto: any;
-  lat: number;
-  lon: number;
-  lugarActual: Lugar;
+ // foto: any;
+ // lat: number;
+ //lon: number;
+ 
+ // lugarActual: Lugar;
   lugaresLista: Lugar[] = [];
   constructor(private camera: Camera, private webview: WebView, private geo: Geolocation, private modalController: ModalController, public NavCtrl: NavController){
   

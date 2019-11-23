@@ -13,6 +13,7 @@ import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http'
 import { Camera } from '@ionic-native/camera/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { AgmCoreModule } from '@agm/core';
 import { MapaModalPage } from 'src/app/reciclaje/mapa-modal/mapa-modal.page';
@@ -24,10 +25,14 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
   imports: [
     HttpClientModule,
     BrowserModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+      mode: "md"
+    }),
     AppRoutingModule, AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBnfVwFjCm5_2G6X8tRXU4jRlEd1bTY6Os'})
-  ],
+      apiKey: 'AIzaSyBnfVwFjCm5_2G6X8tRXU4jRlEd1bTY6Os'}),
+      IonicStorageModule.forRoot()
+  
+    ],
   providers: [
     StatusBar,
     SplashScreen,
